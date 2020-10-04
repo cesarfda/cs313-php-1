@@ -52,7 +52,7 @@ if(isset($_COOKIE['firstname'])){
                                     <p class="card-text">Shopping Cart</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
-                                            <a href="/cart/index.php"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                            <a href="/homepage/cart/index.php"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
                                             
                                         </div>
                                         <small class="text-muted"></small>
