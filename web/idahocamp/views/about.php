@@ -11,7 +11,7 @@
             <hr>
             <p>
               <strong class="text-danger">IdahoCamping</strong> is a campground reviewing website. Users can create their own campgrounds or review others' campgrounds. To get started, simply
-              <a href="/register">sign up</a>.
+              <a href="/idahocamp/views/register">sign up</a>.
             </p>
             <h3>Features</h3>
             <hr>

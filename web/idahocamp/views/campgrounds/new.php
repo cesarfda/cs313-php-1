@@ -75,7 +75,7 @@
               </div>
               <button type="submit" class="btn btn-danger btn-block">Submit</button>
             </form>
-            <a class="btn btn-link" href="/campgrounds">Go Back</a>
+            <a class="btn btn-link" href="/idahocamp/views/campgrounds">Go Back</a>
           </div>
 
         </div>

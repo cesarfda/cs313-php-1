@@ -53,7 +53,7 @@
             </form>
             <div class="mt-2 text-center">
               Have an account?
-              <a href="/login">Login</a>
+              <a href="/idahocamp/views/login">Login</a>
             </div>
           </div>
         </div>
