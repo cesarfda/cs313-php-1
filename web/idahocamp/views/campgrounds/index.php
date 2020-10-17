@@ -53,10 +53,6 @@ $db = get_db(); ?>
       </div>
     </div>
   </nav>
-  <?php
-  $statement = $db->prepare("SELECT id, name, image, description, location, author FROM camp_site");
-  $statement->execute();
-    ?>
   <div id="campgroundHome" class="container ">
     <div class="d-block d-none d-md-none">
       <form action="/campgrounds" method="GET" class="input-group shadow-sm mt-3">
@@ -69,6 +65,10 @@ $db = get_db(); ?>
       </form>
     </div>
     <div class="row">
+    <?php
+    $statement = $db->prepare("SELECT id, name, image, description, location, author FROM camp_site");
+    $statement->execute();
+    ?>
       <?php while ($row = $statement-> fetch(PDO::FETCH_ASSOC)) { ?>
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="card indexCards shadow border-0 mt-4">
@@ -76,18 +76,9 @@ $db = get_db(); ?>
             <div class="card-body">
               <h5 class="card-title text-capitalize">
                 <a href="/campgrounds/<?php echo $row['id']?>"><?php echo $row['name'] ?></a>
-                <?php if (campground.price <= 50) { ?>
-                  <small class="float-right text-muted">$</small>
-                <?php } else if (campground.price < 100) { ?>
-                  <small class="float-right text-muted">$$</small>
-                <?php } else { ?>
-                  <small class="float-right text-muted">$$$</small>
-                <?php } ?>
               </h5>
               <h6 class="card-subtitle">
-                <?php if(campground.comments.length === 0) { ?>
                   <span class="text-muted">No Reviews</span>
-                <?php } else  ?>
               </h6>
             </div>
           </div>
