@@ -26,7 +26,7 @@
             </form>
             <div class="mt-2 text-center">
               Don't have an account?
-              <a href="/idahocamp/views/register">Sign Up</a>
+              <a href="/idahocamp/views/register.php">Sign Up</a>
             </div>
           </div>
         </div>
