@@ -1,6 +1,4 @@
-<% include ./partials/header %>
-<% include ./partials/errorMsg %>
-
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/header.php'; ?>
   <div class="container mt-5">
     <div class="row">
       <div class="col"></div>
@@ -64,4 +62,6 @@
     </div>
   </div>
 
-  <% include ./partials/footer %>
+  <footer>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/footer.php'; ?>
+    </footer>

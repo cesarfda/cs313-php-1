@@ -24,7 +24,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li id="home" class="nav-item">
-            <a class="nav-link" href="/idahocamp/views/campgrounds.php">Campgrounds</a>
+            <a class="nav-link" href="/idahocamp/views/campgrounds">Campgrounds</a>
           </li>
           <li id="about" class="nav-item">
             <a class="nav-link" href="/idahocamp/views/about.php">About</a>
