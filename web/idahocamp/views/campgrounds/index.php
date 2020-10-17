@@ -71,13 +71,13 @@ $db = get_db(); ?>
     while ($row = $statement-> fetch(PDO::FETCH_ASSOC)) : ?>
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="card indexCards shadow border-0 mt-4">
-            <a href="/campgrounds/<?php echo $row['id'] ?>"><img id="campgroundCard" class="card-img-top" src="<?php echo $row['image'] ?>"></a>
+            <a href="#<?php echo $row['id'] ?>"><img id="campgroundCard" class="card-img-top" src="<?php echo $row['image'] ?>"></a>
             <div class="card-body">
               <h5 class="card-title text-capitalize">
-                <a href="/campgrounds/<?php echo $row['id']?>"><?php echo $row['name'] ?></a>
+                <a href="#<?= $row['id']?>"><?= $row['name'] ?></a>
               </h5>
               <h6 class="card-subtitle">
-                  <span class="text-muted">No Reviews</span>
+                  <span class="text-muted"><?= $row['description']?></span>
               </h6>
             </div>
           </div>
