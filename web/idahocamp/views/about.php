@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/yelpcamp/views/partials/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/header.php'; ?>
 
   <div class="container mt-4">
     <div class="row">
@@ -30,5 +30,5 @@
   </div>
 
   <footer>
-            <?php include $_SERVER['DOCUMENT_ROOT'] . '/yelpcamp/views/partials/footer.php'; ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/footer.php'; ?>
 </footer>
