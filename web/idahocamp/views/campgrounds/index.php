@@ -68,7 +68,7 @@ $db = get_db(); ?>
     <?php
     $statement = $db->prepare("SELECT id, name, image, description, location, author FROM camp_site");
     $statement->execute();
-    while ($row = $statement-> fetch(PDO::FETCH_ASSOC)) { ?>
+    while ($row = $statement-> fetch(PDO::FETCH_ASSOC)) : ?>
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="card indexCards shadow border-0 mt-4">
             <a href="/campgrounds/<?php echo $row['id'] ?>"><img id="campgroundCard" class="card-img-top" src="<?php echo $row['image'] ?>"></a>
@@ -82,7 +82,7 @@ $db = get_db(); ?>
             </div>
           </div>
         </div>
-        <?php } ?>
+    <?php endwhile; ?>
     </div>
   </div>
 
