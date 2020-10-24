@@ -24,7 +24,14 @@
                   Please provide a campground name.
                 </div>
               </div>
-              <div class="input-group mb-3">
+              <div class="form-group">
+                <label for="">Image Path*</label>
+                <input type="text" class="form-control" name="campImage" placeholder="Image" required>
+                <div class="invalid-feedback">
+                  Please provide a campground name.
+                </div>
+              </div>
+              <!-- <div class="input-group mb-3">
                 <div class="custom-file">
                   <input type="file" name="image" accept="image/*" class="custom-file-input" id="image" aria-describedby="inputGroupFileAddon01"
                     required>
@@ -33,7 +40,7 @@
                   </div>
                   <label class="custom-file-label" for="inputGroupFile01">Image*</label>
                 </div>
-              </div>
+              </div> -->
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Description*</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" name="campDescription" rows="3" required></textarea>

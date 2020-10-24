@@ -42,6 +42,7 @@ switch ($action){
     case 'addNewCamp':
         //Fetch Data
         $campName = filter_input(INPUT_POST, 'campName', FILTER_SANITIZE_STRING);
+        $campImage = filter_input(INPUT_POST, 'campImage', FILTER_SANITIZE_STRING);
         $campDescription = filter_input(INPUT_POST, 'campDescription', FILTER_SANITIZE_STRING);
         $campLocation = filter_input(INPUT_POST, 'campLocation', FILTER_SANITIZE_STRING);
         $author = 1;
@@ -76,19 +77,20 @@ switch ($action){
                print_r($errors);
             }
          }
-         $campImage = "images/".$file_name;
+
+         #$campImage = "images/".$file_name;
          //Send data to model
          $campOutcome = addNewCamp($campName,$campImage,$campDescription, $campLocation, $author);
          // Check and report the result
          if($campOutcome === 1){
-         $message = "<p>Camp added successfully.</p>";
-         include './views/campgrounds/new.php';
-         exit;
+            $message = "<p>Camp added successfully.</p>";
+            include './views/campgrounds/new.php';
+            exit;
          } 
          else {
-         $message = "<p>Sorry but the process failed. Please try again.</p>";
-         include './views/campgrounds/new.php';
-         exit;
+            $message = "<p>Sorry but the process failed. Please try again.</p>";
+            include './views/campgrounds/new.php';
+            exit;
          }
         
         break;
