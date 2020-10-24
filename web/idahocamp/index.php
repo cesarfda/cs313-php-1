@@ -80,19 +80,18 @@ switch ($action){
 
          #$campImage = "images/".$file_name;
          //Send data to model
-         $campOutcome = addNewCamp($campName,$campImage,$campDescription, $campLocation, $author);
+         try{
+             $campOutcome = addNewCamp($campName,$campImage,$campDescription, $campLocation, $author);
+         }
+         catch(Exception $ex){
+             echo"Error with DB. Details:$ex";
+             die();
+         }
          // Check and report the result
-         if($campOutcome === 1){
+         
             $message = "<p>Camp added successfully.</p>";
             include './views/campgrounds/new.php';
             exit;
-         } 
-         else {
-            $message = "<p>Sorry but the process failed. Please try again.</p>";
-            include './views/campgrounds/new.php';
-            exit;
-         }
-        
         break;
     
     default:

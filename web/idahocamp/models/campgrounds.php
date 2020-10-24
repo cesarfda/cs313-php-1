@@ -17,13 +17,8 @@
     $stmt->bindValue(':campImage', $campImage, PDO::PARAM_STR);
     $stmt->bindValue(':campDescription', $campDescription, PDO::PARAM_STR);
     $stmt->bindValue(':campLocation', $campLocation, PDO::PARAM_STR);
-    $stmt->bindValue(':author', $author, PDO::PARAM_STR);
+    $stmt->bindValue(':author', $author, PDO::PARAM_INT);
     // The next line runs the prepared statement 
     $stmt->execute(); 
-    // Ask how many rows changed as a result of our insert
-    $rowsChanged = $stmt->rowCount();
-    // The next line closes the interaction with the database 
-    $stmt->closeCursor(); 
-     // Return the indication of success (rows changed)
-     return $rowsChanged;
   }
+  ?>
