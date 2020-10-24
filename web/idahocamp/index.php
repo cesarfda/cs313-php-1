@@ -52,7 +52,7 @@ switch ($action){
         include './views/campgrounds/new.php';
         exit;
         }
-
+        $campImage = "images/".$campImage;
          #$campImage = "images/".$file_name;
          //Send data to model
          try{
