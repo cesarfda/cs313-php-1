@@ -1,6 +1,6 @@
 <?php
 // MAIN CONTROLER
-
+require_once '../library/connections.php';
 // Create or access a Session
 session_start();
 
