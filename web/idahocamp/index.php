@@ -16,9 +16,35 @@ if ($action == NULL){
 }
 
 switch ($action){
-    case 'template':
-        include 'view/template.php';
-     break;
+    case 'addCamp':
+        include './views/campgrounds/new.php';
+    break;
+    case 'addNewCamp':
+        //Fetch Data
+        $campName = filter_input(INPUT_POST, 'campName', FILTER_SANITIZE_STRING);
+        $campImage = filter_input(INPUT_POST, 'campImage', FILTER_SANITIZE_STRING);
+        $campDescription = filter_input(INPUT_POST, 'campDescription', FILTER_SANITIZE_STRING);
+        $campLocation = filter_input(INPUT_POST, 'campLocation', FILTER_SANITIZE_STRING);
+        $author = filter_input(INPUT_POST, 'author', FILTER_SANITIZE_STRING);
+        //Check Data
+        if(empty($campName) || empty($campImage) || empty($campDescription) || empty($campLocation) || empty($author)){
+        $message = '<p>Please provide information for all empty fields.</p>';
+        include './views/campgrounds/new.php';
+        exit;
+        }
+        //Send data to model
+        $vehicleOutcome = addNewCamp($campName,$campImage,$campDescription, $campLocation, $author);
+        // Check and report the result
+        if($vehicleOutcome === 1){
+        $message = "<p>Camp added successfully.</p>";
+        include './views/campgrounds/new.phpp';
+        exit;
+        } else {
+        $message = "<p>Sorry but the process failed. Please try again.</p>";
+        include './views/campgrounds/new.php';
+        exit;
+        }
+  break;
     
     default:
      include 'views/campgrounds/index.php';
