@@ -16,7 +16,7 @@
 <body>
   <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-danger">
     <div class="container">
-      <a class="navbar-brand" href="/idahocamp/views/campgrounds">IdahoCamping</a>
+      <a class="navbar-brand" href="./index.php">IdahoCamping</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,22 +24,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li id="home" class="nav-item">
-            <a class="nav-link" href="/idahocamp/views/campgrounds">Campgrounds</a>
+            <a class="nav-link" href="./index.php">Campgrounds</a>
           </li>
           <li id="about" class="nav-item">
-            <a class="nav-link" href="/idahocamp/views/about.php">About</a>
+            <a class="nav-link" href="./index.php?action=About">About</a>
           </li>
           <li id="newCampground" class="nav-item">
-            <a class="nav-link" href="/idahocamp/views/campgrounds/new.php">New</a>
+            <a class="nav-link" href="./index.php?action=addCamp">New</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
           
             <li id="login" class="nav-item">
-              <a class="nav-link" href="/idahocamp/views/login.php">Login</a>
+              <a class="nav-link" href="./index.php?action=login">Login</a>
             </li>
             <li id="register" class="nav-item">
-              <a class="nav-link" href="/idahocamp/views/register.php">Sign Up</a>
+              <a class="nav-link" href="./index.php?action=signUp">Sign Up</a>
             </li>
           
             <li class="nav-item dropdown">
