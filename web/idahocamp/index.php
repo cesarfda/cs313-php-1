@@ -45,7 +45,7 @@ switch ($action){
         $campImage = filter_input(INPUT_POST, 'campImage', FILTER_SANITIZE_STRING);
         $campDescription = filter_input(INPUT_POST, 'campDescription', FILTER_SANITIZE_STRING);
         $campLocation = filter_input(INPUT_POST, 'campLocation', FILTER_SANITIZE_STRING);
-        $author = filter_input(INPUT_POST, 'author', FILTER_SANITIZE_STRING);
+        $author = 1;
         //Check Data
         if(empty($campName) || empty($campDescription) || empty($campLocation) || empty($author)){
         $message = '<p>Please provide information for all empty fields.</p>';
