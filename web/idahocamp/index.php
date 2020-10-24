@@ -78,7 +78,7 @@ switch ($action){
                 // Check and report the result
                 if($vehicleOutcome === 1){
                 $message = "<p>Camp added successfully.</p>";
-                include './views/campgrounds/new.phpp';
+                include './views/campgrounds/new.php';
                 exit;
                 } else {
                 $message = "<p>Sorry but the process failed. Please try again.</p>";
