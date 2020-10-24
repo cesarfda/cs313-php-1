@@ -72,20 +72,20 @@ switch ($action){
         
         // Check if file already exists
         if (file_exists($target_file)) {
-            $message = "<p>Sorry, file already exists.</p>";
+            echo "<p>Sorry, file already exists.</p>";
             $uploadOk = 0;
         }
         
         // Check file size
         if ($_FILES["fileToUpload"]["size"] > 500000) {
-            $message = "<p>Sorry, your file is too large.</p>";
+            echo "<p>Sorry, your file is too large.</p>";
             $uploadOk = 0;
         }
         
         // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
         && $imageFileType != "gif" ) {
-            $message = "<p>Sorry, only JPG, JPEG, PNG & GIF files are allowed.</p>";
+            echo "<p>Sorry, only JPG, JPEG, PNG & GIF files are allowed.</p>";
             $uploadOk = 0;
         }
         
