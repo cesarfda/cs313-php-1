@@ -11,19 +11,12 @@
             <p>
               <small class="text-muted">Fields marked * are required.</small>
             </p>
-            <form action="/campgrounds" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+            <form action="./index.php" method="POST" id ="addNewCamp" enctype="multipart/form-data" class="needs-validation" novalidate>
               <div class="form-group">
                 <label for="">Name*</label>
-                <input type="text" class="form-control" name="campground[name]" placeholder="Name" required>
+                <input type="text" class="form-control" name="campName" placeholder="Name" required>
                 <div class="invalid-feedback">
                   Please provide a campground name.
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="">Price/Night*</label>
-                <input type="number" class="form-control" name="campground[price]" placeholder="Price/Night" min="0.01" step="0.01" required>
-                <div class="invalid-feedback">
-                  Please provide a price.
                 </div>
               </div>
               <div class="input-group mb-3">
@@ -38,44 +31,22 @@
               </div>
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Description*</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" name="campground[description]" rows="3" required></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="campDescription" rows="3" required></textarea>
                 <div class="invalid-feedback">
                   Please provide a description of your campground.
                 </div>
               </div>
               <div class="form-group">
                 <label for="location">Location*</label>
-                <input type="text" class="form-control" name="campground[location]" placeholder="Yosemite National Park, CA" id="location" required>
+                <input type="text" class="form-control" name="campLocation" placeholder="Yosemite National Park, CA" id="location" required>
                 <div class="invalid-feedback">
                   Please provide a valid location
                 </div>
               </div>
-              <div class="form-group">
-                <label for="">Phone Number*</label>
-                <input type="text" class="form-control" name="campground[phone]" placeholder="123-456-7891" required>
-                <div class="invalid-feedback">
-                  Please provide a phone number.
-                </div>
-              </div>
-              <label for="">Booking Window*</label>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" name="campground[start]" placeholder="Starting Month" required>
-                  <div class="invalid-feedback">
-                    Please provide a booking window.
-                  </div>
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" name="campground[end]" placeholder="Ending Month" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="">Amenities separated by commas</label>
-                <input type="text" class="form-control" name="campground[tags]" placeholder="Example: boating, fishing, wifi">
-              </div>
               <button type="submit" class="btn btn-danger btn-block">Submit</button>
+              <input type="hidden" name="action" value="addNewCamp">
             </form>
-            <a class="btn btn-link" href="/idahocamp/views/campgrounds">Go Back</a>
+            <a class="btn btn-link" href="./index.php">Go Back</a>
           </div>
 
         </div>

@@ -49,8 +49,7 @@
                 
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/idahocamp/views/users/<?= "USERID"?>">Profile</a>
-                <a class="dropdown-item" href="/idahocamp/views/logout.php">Log Out</a>
+                <a class="dropdown-item" href="./index.php?action=logout">Log Out</a>
               </div>
             </li>
          
