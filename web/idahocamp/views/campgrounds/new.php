@@ -19,14 +19,14 @@
             <form action="./index.php" method="POST" id ="addNewCamp" enctype="multipart/form-data" class="needs-validation" novalidate>
               <div class="form-group">
                 <label for="">Name*</label>
-                <input type="text" class="form-control" name="campName" placeholder="Name" required>
+                <input type="text" class="form-control" name="campName" id="campName" placeholder="Name" required>
                 <div class="invalid-feedback">
                   Please provide a campground name.
                 </div>
               </div>
               <div class="form-group">
                 <label for="">Image Path*</label>
-                <input type="text" class="form-control" name="campImage" placeholder="Image" required>
+                <input type="text" class="form-control" name="campImage" id="campImage" placeholder="Image" required>
                 <div class="invalid-feedback">
                   Please provide a campground name.
                 </div>
@@ -43,14 +43,14 @@
               </div> -->
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Description*</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" name="campDescription" rows="3" required></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="campDescription" id="campDescription" rows="3" required></textarea>
                 <div class="invalid-feedback">
                   Please provide a description of your campground.
                 </div>
               </div>
               <div class="form-group">
                 <label for="location">Location*</label>
-                <input type="text" class="form-control" name="campLocation" placeholder="Yosemite National Park, CA" id="location" required>
+                <input type="text" class="form-control" name="campLocation" placeholder="Yosemite National Park, CA" id="campLocation" required>
                 <div class="invalid-feedback">
                   Please provide a valid location
                 </div>
