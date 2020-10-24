@@ -72,25 +72,25 @@ switch ($action){
             
             if(empty($errors)==true){
                move_uploaded_file($file_tmp,"images/".$file_name);
-               echo "Success";
+               $campImage = "images/".$file_name;
+                //Send data to model
+                $vehicleOutcome = addNewCamp($campName,$campImage,$campDescription, $campLocation, $author);
+                // Check and report the result
+                if($vehicleOutcome === 1){
+                $message = "<p>Camp added successfully.</p>";
+                include './views/campgrounds/new.phpp';
+                exit;
+                } else {
+                $message = "<p>Sorry but the process failed. Please try again.</p>";
+                include './views/campgrounds/new.php';
+                exit;
+                }
             }else{
                print_r($errors);
             }
          }
-        $campImage = "images/".$file_name;
-        //Send data to model
-        $vehicleOutcome = addNewCamp($campName,$campImage,$campDescription, $campLocation, $author);
-        // Check and report the result
-        if($vehicleOutcome === 1){
-        $message = "<p>Camp added successfully.</p>";
-        include './views/campgrounds/new.phpp';
-        exit;
-        } else {
-        $message = "<p>Sorry but the process failed. Please try again.</p>";
-        include './views/campgrounds/new.php';
-        exit;
-        }
-  break;
+        
+    break;
     
     default:
      include 'views/campgrounds/index.php';
