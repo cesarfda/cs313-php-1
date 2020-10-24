@@ -1,7 +1,7 @@
 <div class="mt-3">
   <footer class="footer">
     <div class="container text-center">
-      <small class="text-muted"> &copy; IdahoCamping 2020 | <a class="text-muted" href="/idahocamp/views/about.php">About</a> | <a class="text-muted" href="https://github.com/cesarfda">Github</a></small>
+      <small class="text-muted"> &copy; IdahoCamping 2020 | <a class="text-muted" href="./index.php?action=About">About</a> | <a class="text-muted" href="https://github.com/cesarfda">Github</a></small>
     </div>  
   </footer>
 </div>

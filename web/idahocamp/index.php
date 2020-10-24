@@ -47,7 +47,7 @@ switch ($action){
         $campLocation = filter_input(INPUT_POST, 'campLocation', FILTER_SANITIZE_STRING);
         $author = filter_input(INPUT_POST, 'author', FILTER_SANITIZE_STRING);
         //Check Data
-        if(empty($campName) || empty($campImage) || empty($campDescription) || empty($campLocation) || empty($author)){
+        if(empty($campName) || empty($campDescription) || empty($campLocation) || empty($author)){
         $message = '<p>Please provide information for all empty fields.</p>';
         include './views/campgrounds/new.php';
         exit;
@@ -72,20 +72,20 @@ switch ($action){
         
         // Check if file already exists
         if (file_exists($target_file)) {
-            echo "Sorry, file already exists.";
+            $message = "<p>Sorry, file already exists.</p>";
             $uploadOk = 0;
         }
         
         // Check file size
         if ($_FILES["fileToUpload"]["size"] > 500000) {
-            echo "Sorry, your file is too large.";
+            $message = "<p>Sorry, your file is too large.</p>";
             $uploadOk = 0;
         }
         
         // Allow certain file formats
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
         && $imageFileType != "gif" ) {
-            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $message = "<p>Sorry, only JPG, JPEG, PNG & GIF files are allowed.</p>";
             $uploadOk = 0;
         }
         
