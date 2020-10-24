@@ -11,6 +11,11 @@
             <p>
               <small class="text-muted">Fields marked * are required.</small>
             </p>
+            <?php
+                    if (isset($message)) {
+                    echo $message;
+                    }
+            ?>
             <form action="./index.php" method="POST" id ="addNewCamp" enctype="multipart/form-data" class="needs-validation" novalidate>
               <div class="form-group">
                 <label for="">Name*</label>
