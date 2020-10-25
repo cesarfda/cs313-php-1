@@ -57,7 +57,7 @@
               </div>
               <button type="submit" class="btn btn-danger btn-block">Submit</button>
               <input type="hidden" name="action" value="updateCamp">
-              <input type="hidden" name="id" value="<?php if(isset($campInfo['id'])){ echo $campInfo['id'];?>">
+              <input type="hidden" name="id" value="<?php if(isset($campInfo['id'])){ echo $campInfo['id'];}?>">
             </form>
             <a class="btn btn-link" href="./index.php">Go Back</a>
           </div>
@@ -73,4 +73,4 @@
   </div>
   <footer>
             <?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/footer.php'; ?>
-    </footer>
+  </footer>
