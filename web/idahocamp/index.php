@@ -107,9 +107,10 @@ switch ($action){
             $campId = filter_input(INPUT_POST, 'campId', FILTER_SANITIZE_NUMBER_INT);
             $campName = filter_input(INPUT_POST, 'campName', FILTER_SANITIZE_STRING);
             $campImage = filter_input(INPUT_POST, 'campImage', FILTER_SANITIZE_STRING);
+            $campLocation = filter_input(INPUT_POST, 'campLocation', FILTER_SANITIZE_STRING);
             $campDescription = filter_input(INPUT_POST, 'campDescription', FILTER_SANITIZE_STRING);
             //Check Data
-            if(empty($campId) ||empty($campName) || empty($campDescription) || empty($campImage)){
+            if(empty($campId) ||empty($campName) || empty($campDescription) || empty($campImage) || empty($campLocation)){
                 $message = '<p>Please provide information for all empty fields.</p>';
                 include './views/campgrounds/edit.php';
                 exit;
@@ -121,7 +122,7 @@ switch ($action){
                     // Create a connection object from the phpmotors connection function
                     $db = get_db(); 
                     // The SQL statement to be used with the database 
-                    $sql = 'UPDATE camp_site SET name = :campName, image = :campImage, description = :campDescription WHERE id = :campId'; 
+                    $sql = 'UPDATE camp_site SET name = :campName, image = :campImage, description = :campDescription, location = :campLocation WHERE id = :campId'; 
                     // The next line creates the prepared statement using the phpmotors connection      
                     $stmt = $db->prepare($sql);
                     // The next four lines replace the placeholders in the SQL
@@ -130,6 +131,7 @@ switch ($action){
                     $stmt->bindValue(':campName', $campName, PDO::PARAM_STR);
                     $stmt->bindValue(':campImage', $campImage, PDO::PARAM_STR);
                     $stmt->bindValue(':campDescription', $campDescription, PDO::PARAM_STR);
+                    $stmt->bindValue(':campLocation', $campLocation, PDO::PARAM_STR);
                     $stmt->bindValue(':campId', $campId, PDO::PARAM_INT);
                     // The next line runs the prepared statement 
                     $stmt->execute();

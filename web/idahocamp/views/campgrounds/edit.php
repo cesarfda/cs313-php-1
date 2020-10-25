@@ -19,14 +19,14 @@
             <form action="./index.php" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
               <div class="form-group">
                 <label for="">Name*</label>
-                <input type="text" class="form-control" name="campName" id="campName" placeholder="Name" required <?php if(isset($campInfo['name'])){echo "value='$campInfo[name]'";}?>>
+                <input type="text" class="form-control" name="campName" id="campName" placeholder="Name" required <?php if(isset($campName)){echo "value='$campName'";} elseif(isset($campInfo['name'])){echo "value='$campInfo[name]'";}?>>
                 <div class="invalid-feedback">
                   Please provide a campground name.
                 </div>
               </div>
               <div class="form-group">
                 <label for="">Image URL*</label>
-                <input type="text" class="form-control" name="campImage" id="campImage" placeholder="Image" required <?php if(isset($campInfo['image'])){echo "value='$campInfo[image]'";}?>>
+                <input type="text" class="form-control" name="campImage" id="campImage" placeholder="Image" required <?php if(isset($campImage)){echo "value='$campImage'";} elseif(isset($campInfo['image'])){echo "value='$campInfo[image]'";}?>>
                 <div class="invalid-feedback">
                   Please provide a campground name.
                 </div>
@@ -43,21 +43,21 @@
               </div> -->
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Description*</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" name="campDescription" id="campDescription" rows="3" required><?php if(isset($campInfo['description'])){echo "$campInfo[description]";}?></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="campDescription" id="campDescription" rows="3" required><?php if(isset($campDescription)){echo $campDescription;} elseif(isset($campInfo['description'])){echo "$campInfo[description]";}?></textarea>
                 <div class="invalid-feedback">
                   Please provide a description of your campground.
                 </div>
               </div>
               <div class="form-group">
                 <label for="location">Location*</label>
-                <input type="text" class="form-control" name="campLocation" placeholder="Yosemite National Park, CA" id="campLocation" required <?php if(isset($campInfo['location'])){echo "value='$campInfo[location]'";}?>>
+                <input type="text" class="form-control" name="campLocation" placeholder="Yosemite National Park, CA" id="campLocation" required <?php if(isset($campLocation)){echo "value='$campLocation'";} elseif(isset($campInfo['location'])){echo "value='$campInfo[location]'";}?>>
                 <div class="invalid-feedback">
                   Please provide a valid location
                 </div>
               </div>
               <button type="submit" class="btn btn-danger btn-block">Submit</button>
               <input type="hidden" name="action" value="updateCamp">
-              <input type="hidden" name="id" value="<?php if(isset($campInfo['id'])){ echo $campInfo['id'];}?>">
+              <input type="hidden" name="campId" value="<?php if(isset($campId)){echo $campId;} elseif(isset($campInfo['id'])){ echo $campInfo['id'];}?>">
             </form>
             <a class="btn btn-link" href="./index.php">Go Back</a>
           </div>
