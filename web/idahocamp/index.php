@@ -108,10 +108,8 @@ switch ($action){
             $campName = filter_input(INPUT_POST, 'campName', FILTER_SANITIZE_STRING);
             $campImage = filter_input(INPUT_POST, 'campImage', FILTER_SANITIZE_STRING);
             $campDescription = filter_input(INPUT_POST, 'campDescription', FILTER_SANITIZE_STRING);
-            $campLocation = filter_input(INPUT_POST, 'campLocation', FILTER_SANITIZE_STRING);
-            $author = 1;
             //Check Data
-            if(empty($campName) || empty($campDescription) || empty($campImage) || empty($campLocation) || empty($author)){
+            if(empty($campId) ||empty($campName) || empty($campDescription) || empty($campImage)){
                 $message = '<p>Please provide information for all empty fields.</p>';
                 include './views/campgrounds/edit.php';
                 exit;
