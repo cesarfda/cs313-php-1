@@ -135,7 +135,8 @@ switch ($action){
                     $stmt->bindValue(':campLocation', $campLocation, PDO::PARAM_STR);
                     $stmt->bindValue(':campId', $campId, PDO::PARAM_INT);
                     // The next line runs the prepared statement 
-                    $stmt->execute(); 
+                    $stmt->execute();
+                    $stmt->closeCursor();  
                   
              }
              catch(Exception $ex){
