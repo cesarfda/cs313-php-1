@@ -142,7 +142,7 @@ switch ($action){
                  die();
              }
              // Check and report the result
-                #header('Location: /idahocamp/index.php');
+                header('Location: /idahocamp/index.php');
                 exit;
             break;
     
