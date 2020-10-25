@@ -112,10 +112,11 @@ switch ($action){
             $author = 1;
             //Check Data
             if(empty($campName) || empty($campDescription) || empty($campImage) || empty($campLocation) || empty($author)){
-            $message = '<p>Please provide information for all empty fields.</p>';
-            include './views/campgrounds/edit.php';
-            exit;
+                $message = '<p>Please provide information for all empty fields.</p>';
+                include './views/campgrounds/edit.php';
+                exit;
             }
+            echo $campDescription;
              #$campImage = "images/".$file_name;
              //Send data to model
              try{
@@ -144,7 +145,7 @@ switch ($action){
                  die();
              }
              // Check and report the result
-                include 'views/campgrounds/index.php';
+                header('Location: /idahocamp/index.php');
                 exit;
             break;
     
