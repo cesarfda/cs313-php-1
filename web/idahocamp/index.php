@@ -132,7 +132,6 @@ switch ($action){
                     $stmt->bindValue(':campName', $campName, PDO::PARAM_STR);
                     $stmt->bindValue(':campImage', $campImage, PDO::PARAM_STR);
                     $stmt->bindValue(':campDescription', $campDescription, PDO::PARAM_STR);
-                    $stmt->bindValue(':campLocation', $campLocation, PDO::PARAM_STR);
                     $stmt->bindValue(':campId', $campId, PDO::PARAM_INT);
                     // The next line runs the prepared statement 
                     $stmt->execute();
