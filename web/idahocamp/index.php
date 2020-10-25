@@ -100,8 +100,8 @@ switch ($action){
             $campId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
             $campInfo = getCampInfo($campId);
             include './views/campgrounds/edit.php';
-
         break;
+
         case 'updateCamp':
             //Fetch Data
             $campId = filter_input(INPUT_POST, 'campId', FILTER_SANITIZE_NUMBER_INT);
@@ -120,11 +120,10 @@ switch ($action){
              #$campImage = "images/".$file_name;
              //Send data to model
              try{
-                
                     // Create a connection object from the phpmotors connection function
                     $db = get_db(); 
                     // The SQL statement to be used with the database 
-                    $sql = 'UPDATE camp_site SET name = :campName, image = :campImage, description = :campDescription, location = :campLocation WHERE id = :campId'; 
+                    $sql = 'UPDATE camp_site SET name = :campName, image = :campImage, description = :campDescription WHERE id = :campId'; 
                     // The next line creates the prepared statement using the phpmotors connection      
                     $stmt = $db->prepare($sql);
                     // The next four lines replace the placeholders in the SQL
@@ -138,14 +137,13 @@ switch ($action){
                     // The next line runs the prepared statement 
                     $stmt->execute();
                     $stmt->closeCursor();  
-                  
              }
              catch(Exception $ex){
                  echo"Error with DB. Details:$ex";
                  die();
              }
              // Check and report the result
-                header('Location: /idahocamp/index.php');
+                #header('Location: /idahocamp/index.php');
                 exit;
             break;
     
