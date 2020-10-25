@@ -1,5 +1,4 @@
-<% include ../partials/header %>
-  <% include ../partials/errorMsg %>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/header.php'; ?>
 
     <div id="campgroundsContainer" class="container mt-4">
       <div class="row">
@@ -259,34 +258,8 @@
           </div>
         </div>
       </div>
-    </div>
+                                      </div>
 
-    <script>
-      function initMap() {
-        var lat = <%= campground.lat %>;
-        var lng = <%= campground.lng %>;
-        var center = {
-          lat: lat,
-          lng: lng
-        };
-        var map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 8,
-          center: center,
-          scrollwheel: false
-        });
-        var contentString = "<%= campground.location %>";
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-        var marker = new google.maps.Marker({
-          position: center,
-          map: map
-        });
-        marker.addListener("click", function() {
-          infowindow.open(map, marker);
-        });
-      }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEgVKHwajPQq9PK-6ddk19KM83duXX8E0&callback=initMap"></script>
-
-    <% include ../partials/footer %>
+    <footer>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/footer.php'; ?>
+    </footer>

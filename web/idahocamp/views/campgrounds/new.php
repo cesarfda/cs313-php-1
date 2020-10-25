@@ -25,7 +25,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="">Image Path*</label>
+                <label for="">Image URL*</label>
                 <input type="text" class="form-control" name="campImage" id="campImage" placeholder="Image" required>
                 <div class="invalid-feedback">
                   Please provide a campground name.
