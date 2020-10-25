@@ -19,14 +19,14 @@
             <form action="./index.php" method="POST" id ="addNewCamp" enctype="multipart/form-data" class="needs-validation" novalidate>
               <div class="form-group">
                 <label for="">Name*</label>
-                <input type="text" class="form-control" name="campName" id="campName" placeholder="Name" required>
+                <input type="text" class="form-control" name="campName" id="campName" placeholder="Name" required <?php if(isset($campInfo['campName'])){echo "value='$campInfo[campName]'";}?>>
                 <div class="invalid-feedback">
                   Please provide a campground name.
                 </div>
               </div>
               <div class="form-group">
                 <label for="">Image URL*</label>
-                <input type="text" class="form-control" name="campImage" id="campImage" placeholder="Image" required>
+                <input type="text" class="form-control" name="campImage" id="campImage" placeholder="Image" required <?php if(isset($campInfo['campImage'])){echo "value='$campInfo[campImage]'";}?>>
                 <div class="invalid-feedback">
                   Please provide a campground name.
                 </div>
@@ -43,14 +43,14 @@
               </div> -->
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Description*</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" name="campDescription" id="campDescription" rows="3" required></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="campDescription" id="campDescription" rows="3" required><?php if(isset($campInfo['campDescription'])){echo "value='$campInfo[campDescription]'";}?></textarea>
                 <div class="invalid-feedback">
                   Please provide a description of your campground.
                 </div>
               </div>
               <div class="form-group">
                 <label for="location">Location*</label>
-                <input type="text" class="form-control" name="campLocation" placeholder="Yosemite National Park, CA" id="campLocation" required>
+                <input type="text" class="form-control" name="campLocation" placeholder="Yosemite National Park, CA" id="campLocation" required<?php if(isset($campInfo['campLocation'])){echo "value='$campInfo[campLocation]'";}?>>
                 <div class="invalid-feedback">
                   Please provide a valid location
                 </div>
