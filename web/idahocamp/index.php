@@ -116,7 +116,7 @@ switch ($action){
                 include './views/campgrounds/edit.php';
                 exit;
             }
-            var_dump($campDescription) ;
+            #var_dump($campDescription) ;
              #$campImage = "images/".$file_name;
              //Send data to model
              try{
