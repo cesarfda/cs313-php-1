@@ -71,7 +71,7 @@
             <a href="./index.php?action=mod&id=<?= $row['id'] ?>"><img id="campgroundCard" class="card-img-top" src="<?php echo $row['image'] ?>"></a>
             <div class="card-body">
               <h5 class="card-title text-capitalize">
-                <a href="#<?= $row['id']?>"><?= $row['name'] ?></a>
+                <a href="./index.php?action=mod&id=<?= $row['id'] ?>"><?= $row['name'] ?></a>
               </h5>
               <h6 class="card-subtitle">
                   <span class="text-muted"><?= $row['description']?></span>

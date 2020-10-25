@@ -97,7 +97,7 @@ switch ($action){
         break;
 
 
-        case 'edit':
+        case 'mod':
             $campId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
             $campInfo = getCampInfo($campId);
             
