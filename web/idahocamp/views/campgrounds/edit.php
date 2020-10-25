@@ -43,20 +43,20 @@
               </div> -->
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Description*</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" name="campDescription" id="campDescription" rows="3" required><?php if(isset($campInfo['description'])){echo "value='$campInfo[description]'";}?></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="campDescription" id="campDescription" rows="3" required><?php if(isset($campInfo['description'])){echo "$campInfo[description]";}?></textarea>
                 <div class="invalid-feedback">
                   Please provide a description of your campground.
                 </div>
               </div>
               <div class="form-group">
                 <label for="location">Location*</label>
-                <input type="text" class="form-control" name="campLocation" placeholder="Yosemite National Park, CA" id="campLocation" required<?php if(isset($campInfo['location'])){echo "value='$campInfo[location]'";}?>>
+                <input type="text" class="form-control" name="campLocation" placeholder="Yosemite National Park, CA" id="campLocation" required <?php if(isset($campInfo['location'])){echo "value='$campInfo[location]'";}?>>
                 <div class="invalid-feedback">
                   Please provide a valid location
                 </div>
               </div>
               <button type="submit" class="btn btn-danger btn-block">Submit</button>
-              <input type="hidden" name="action" value="addNewCamp">
+              <input type="hidden" name="action" value="updateCamp">
             </form>
             <a class="btn btn-link" href="./index.php">Go Back</a>
           </div>
