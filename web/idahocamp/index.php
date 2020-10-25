@@ -100,7 +100,6 @@ switch ($action){
         case 'mod':
             $campId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
             $campInfo = getCampInfo($campId);
-            var_dump($campInfo);
             include './views/campgrounds/edit.php';
 
         break;
