@@ -63,7 +63,6 @@ switch ($action){
         include './views/campgrounds/new.php';
         exit;
         }
-        $campImage = "images/".$campImage;
          #$campImage = "images/".$file_name;
          //Send data to model
          try{
@@ -125,7 +124,7 @@ switch ($action){
                     // Create a connection object from the phpmotors connection function
                     $db = get_db(); 
                     // The SQL statement to be used with the database 
-                    $sql = 'UPDATE SET name = :campName, image = :campImage, description = :campDescription, location = :campLocation WHERE id = :campId'; 
+                    $sql = 'UPDATE camp_site SET name = :campName, image = :campImage, description = :campDescription, location = :campLocation WHERE id = :campId'; 
                     // The next line creates the prepared statement using the phpmotors connection      
                     $stmt = $db->prepare($sql);
                     // The next four lines replace the placeholders in the SQL
