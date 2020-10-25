@@ -16,7 +16,7 @@
                     echo $message;
                     }
             ?>
-            <form action="./index.php" method="POST" id ="addNewCamp" enctype="multipart/form-data" class="needs-validation" novalidate>
+            <form action="./index.php" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
               <div class="form-group">
                 <label for="">Name*</label>
                 <input type="text" class="form-control" name="campName" id="campName" placeholder="Name" required <?php if(isset($campInfo['name'])){echo "value='$campInfo[name]'";}?>>
