@@ -7,7 +7,7 @@ session_start();
 
 function getCampInfo($campId){
     $db = get_db();
-    $sql = 'SELECT * FROM camp_site WHERE invId = :campId';
+    $sql = 'SELECT * FROM camp_site WHERE id = :campId';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':campId', $campId, PDO::PARAM_INT);
     $stmt->execute();
