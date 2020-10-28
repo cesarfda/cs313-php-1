@@ -48,7 +48,7 @@
                   <i class="fas fa-trash-alt"></i>
                 </button>
                 </form>
-                <a href="./index.php?action=mod&id=<?= $row['id'] ?>" class="btn text-dark btn-lg float-right">
+                <a href="./index.php?action=mod&id=<?= $campInfo['id'] ?>" class="btn text-dark btn-lg float-right">
                 <i class="fas fa-pencil-alt"></i>
               </a>
             </div>
