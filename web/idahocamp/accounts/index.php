@@ -14,11 +14,11 @@ if ($action == NULL){
 
 switch ($action){
     case 'signUp':
-        include './views/register.php';
+        include '../views/register.php';
     break;
     
     case 'login':
-      include '../view/login.php';
+      include '../views/login.php';
     break;
    
     //REGISTRATION CASE
