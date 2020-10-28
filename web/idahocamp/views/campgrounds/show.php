@@ -1,7 +1,7 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/header.php'; ?>
 
     <div id="campgroundsContainer" class="container mt-4">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-3">
           <div class="d-none d-md-block">
             <div class="lead text-center text-capitalize">
@@ -16,10 +16,10 @@
                     </ul>
                   </div>
           </div>
-        </div>
+        </div> -->
         <div class="col-md-9">
           <div class="card shadow-sm">
-            <img class="card-img-top" src="<%= campground.image %>">
+            <img class="card-img-top" src="<?php if(isset($campInfo['image'])){echo "$campInfo[image]";} ?>">
             <div class="card-body">
               <h5 class="card-title text-capitalize">
               <?php if(isset($campInfo['name'])){echo "$campInfo[name]";} ?>
