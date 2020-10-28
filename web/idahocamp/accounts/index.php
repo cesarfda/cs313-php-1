@@ -191,7 +191,7 @@ switch ($action){
     
     //DEFAULT
       default:
-        include '../views/campgrounds/index.php';
+        include '../index.php';
       break;
  }
 

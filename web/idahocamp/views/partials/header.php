@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="public/stylesheets/main.css">
+  <link rel="stylesheet" type="text/css" href="/idahocamp/public/stylesheets/main.css">
 </head>
 
 <body>
   <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-danger">
     <div class="container">
-      <a class="navbar-brand" href="/index.php">Idaho Camping</a>
+      <a class="navbar-brand" href="/idahocamp/index.php">Idaho Camping</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
