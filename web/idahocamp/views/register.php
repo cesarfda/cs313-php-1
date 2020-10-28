@@ -9,6 +9,11 @@
             <p>
               <small class="text-muted">Fields marked * are required.</small>
             </p>
+            <?php
+                    if (isset($message)) {
+                    echo $message;
+                    }
+            ?>
             <form class="needs-validation" action="/idahocamp/accounts/index.php" enctype="multipart/form-data" method="POST" novalidate>
               <div class="form-group">
                 <label for="">Name*</label>
