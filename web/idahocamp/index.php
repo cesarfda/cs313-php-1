@@ -100,7 +100,49 @@ switch ($action){
             $campId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
             $campInfo = getCampInfo($campId);
             include './views/campgrounds/edit.php';
+            die();
         break;
+
+        case 'detail':
+            $campId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+            $campInfo = getCampInfo($campId);
+            include './views/campgrounds/show.php';
+            die();
+        break;
+
+        case 'deleteCamp':
+            //Fetch Data
+            $campId = filter_input(INPUT_POST, 'campId', FILTER_SANITIZE_NUMBER_INT);
+            //Check Data
+            if(empty($campId)){
+                $message = '<p>The deletion could not be completed. Please try again later</p>';
+                include './views/campgrounds/delete.php';
+                exit;
+            }
+             //Send data to model
+             try{
+                    // Create a connection object from the phpmotors connection function
+                    $db = get_db(); 
+                    // The SQL statement to be used with the database 
+                    $sql = 'DELETE FROM camp_site WHERE id = :campId'; 
+                    // The next line creates the prepared statement using the phpmotors connection      
+                    $stmt = $db->prepare($sql);
+                    // The next four lines replace the placeholders in the SQL
+                    // statement with the actual values in the variables
+                    // and tells the database the type of data it is
+                    $stmt->bindValue(':campId', $campId, PDO::PARAM_INT);
+                    // The next line runs the prepared statement 
+                    $stmt->execute();
+                    $stmt->closeCursor();  
+             }
+             catch(Exception $ex){
+                 echo"Error with DB. Details:$ex";
+                 die();
+             }
+             // Check and report the result
+                header('Location: /idahocamp/index.php');
+                exit;
+            break;
 
         case 'updateCamp':
             //Fetch Data

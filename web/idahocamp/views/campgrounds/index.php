@@ -68,10 +68,10 @@
     while ($row = $statement-> fetch(PDO::FETCH_ASSOC)) : ?>
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="card indexCards shadow border-0 mt-4">
-            <a href="./index.php?action=mod&id=<?= $row['id'] ?>"><img id="campgroundCard" class="card-img-top" src="<?php echo $row['image'] ?>"></a>
+            <a href="./index.php?action=detail&id=<?= $row['id'] ?>"><img id="campgroundCard" class="card-img-top" src="<?php echo $row['image'] ?>"></a>
             <div class="card-body">
               <h5 class="card-title text-capitalize">
-                <a href="./index.php?action=mod&id=<?= $row['id'] ?>"><?= $row['name'] ?></a>
+                <a href="./index.php?action=detail&id=<?= $row['id'] ?>"><?= $row['name'] ?></a>
               </h5>
               <h6 class="card-subtitle">
                   <span class="text-muted"><?= $row['description']?></span>
