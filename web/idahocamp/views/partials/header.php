@@ -41,23 +41,21 @@
             <li id="register" class="nav-item">
               <a class="nav-link" href="./accounts/index.php?action=signUp">Sign Up</a>
             </li>
-          
-            <li class="nav-item dropdown">
+
+              <?php 
+              if($_SESSION['loggedin']){?>
+              <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 <i class="fas fa-user"></i>
                 
               </a>
-              
-              <?php 
-              if($_SESSION['loggedin']){?>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <a class='dropdown-item' href='./accounts'>Profile</a>
                 <a class="dropdown-item" href=".accounts/index.php?action=logout">Log Out</a>
               </div>
+              </li>
               <?php } ?>
-            </li>
-         
         </ul>
       </div>
     </div>
