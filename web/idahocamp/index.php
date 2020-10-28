@@ -35,21 +35,6 @@ switch ($action){
         include './views/about.php';
     break;
 
-    case 'login':
-        include './views/login.php';
-    break;
-
-    case 'logout':
-        //Destroy Session
-        session_destroy();
-        //Send user back to main controller
-        header('Location: /idahocamp/index.php');
-    break;
-
-    case 'signUp':
-        include './views/register.php';
-    break;
-
     case 'addNewCamp':
         //Fetch Data
         $campName = filter_input(INPUT_POST, 'campName', FILTER_SANITIZE_STRING);

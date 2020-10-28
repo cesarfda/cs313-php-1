@@ -18,21 +18,11 @@
                 </div>
               </div>
               <div class="form-group">
-                <div class="custom-file">
-                  <input type="file" name="image" accept="image/*" class="custom-file-input" id="image" aria-describedby="inputGroupFileAddon01">
-                  <label class="custom-file-label" for="inputGroupFile01">Avatar</label>
-                </div>
-              </div>
-              <div class="form-group">
                 <label for="">Email*</label>
                 <input type="text" name="email" class="form-control" id="email" placeholder="john@smith.com" required>
                 <div class="invalid-feedback">
                   Please provide an email.
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="">Phone</label>
-                <input type="text" name="phone" class="form-control" id="phone" placeholder="123-456-6789">
               </div>
               <div class="form-group">
                 <label for="">Username*</label>

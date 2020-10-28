@@ -36,10 +36,10 @@
         <ul class="navbar-nav ml-auto">
           
             <li id="login" class="nav-item">
-              <a class="nav-link" href="./index.php?action=login">Login</a>
+              <a class="nav-link" href="./idahocamp/accounts/index.php?action=login">Login</a>
             </li>
             <li id="register" class="nav-item">
-              <a class="nav-link" href="./index.php?action=signUp">Sign Up</a>
+              <a class="nav-link" href="./idahocamp/accounts/index.php?action=signUp">Sign Up</a>
             </li>
           
             <li class="nav-item dropdown">
@@ -49,7 +49,12 @@
                 
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./index.php?action=logout">Log Out</a>
+              <?php 
+              if($_SESSION['loggedin']){
+                echo "<a class='dropdown-item' href='./idahocamp/accounts'>Profile</a>";
+              }
+              ?>
+                <a class="dropdown-item" href="./idahocamp/accounts/index.php?action=logout">Log Out</a>
               </div>
             </li>
          
