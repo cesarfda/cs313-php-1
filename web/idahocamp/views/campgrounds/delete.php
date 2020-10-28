@@ -57,7 +57,7 @@
               </div>
               <button type="submit" class="btn btn-danger btn-block">Delete</button>
               <input type="hidden" name="action" value="deleteCamp">
-              <input type="hidden" name="id" value="<?php if(isset($campId)){echo $campId;} elseif(isset($campInfo['id'])){ echo $campInfo['id'];}?>">
+              <input type="hidden" name="campId" value="<?php if(isset($campId)){echo $campId;} elseif(isset($campInfo['id'])){ echo $campInfo['id'];}?>">
             </form>
             <a class="btn btn-link" href="./index.php">Go Back</a>
           </div>
