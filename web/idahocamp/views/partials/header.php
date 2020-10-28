@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="<?php echo $_SERVER['DOCUMENT_ROOT'] . "idahocamp/public/stylesheets/main.css"?>">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/main.css">
 </head>
 
 <body>
   <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-danger">
     <div class="container">
-      <a class="navbar-brand" href="./index.php">Idaho Camping</a>
+      <a class="navbar-brand" href="/index.php">Idaho Camping</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,13 +24,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li id="home" class="nav-item">
-            <a class="nav-link" href="<?php echo $_SERVER['DOCUMENT_ROOT'] . "idahocamp/index.php"?>">Campgrounds</a>
+            <a class="nav-link" href="./index.php">Campgrounds</a>
           </li>
           <li id="about" class="nav-item">
-            <a class="nav-link" href="<?php echo $_SERVER['DOCUMENT_ROOT'] . "idahocamp/index.php?action=About"?>">About</a>
+            <a class="nav-link" href="./index.php?action=About">About</a>
           </li>
           <li id="newCampground" class="nav-item">
-            <a class="nav-link" href="<?php echo $_SERVER['DOCUMENT_ROOT'] . "idahocamp/index.php?action=addCamp"?>">New</a>
+            <a class="nav-link" href="./index.php?action=addCamp">New</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
