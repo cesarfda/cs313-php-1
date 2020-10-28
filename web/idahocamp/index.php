@@ -113,7 +113,7 @@ switch ($action){
         case 'del':
             $campId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
             $campInfo = getCampInfo($campId);
-            include './views/campgrounds/edit.php';
+            include './views/campgrounds/delete.php';
             die();
         break;
 
