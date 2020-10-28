@@ -37,14 +37,14 @@ switch ($action){
       // Check for existing email address in the table
       if($existingEmail){
       $message = '<p class="notice">That email address already exists. Do you want to login instead?</p>';
-      include './views/login.php';
+      include '../views/login.php';
       exit;
       }
 
       // Check for missing data
       if(empty($fullName) || empty($username) || empty($email) || empty($checkPassword)){
       $message = '<p>Please provide information for all empty form fields.</p>';
-      include './views/register.php';
+      include '../views/register.php';
       exit; 
       }
     
