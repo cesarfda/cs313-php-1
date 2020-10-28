@@ -37,7 +37,7 @@
                 <span>Submitted by
                 <a href="/users/<?= $campInfo['author'] ?>">
                 <?php if(isset($campInfo['author'])){echo "$campInfo[author]";} ?></a> on
-                <?php if(isset($campInfo['creation_date'])){echo "$campInfo[creation_date]";} ?>
+                <?php if(isset($campInfo['creation_date'])){echo "date_format($campInfo[creation_date], 'd/m/Y H:i:s')";} ?>
               </span>
               </p>
               <!-- Add session to control delete buttons -->
