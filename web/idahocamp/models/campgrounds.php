@@ -1,6 +1,6 @@
 <?php
 //===========================
-//FUNCTION TO ADD A VEHICLE
+//FUNCTION TO ADD A Campsite
 //===========================
   
   ?>

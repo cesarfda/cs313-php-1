@@ -1,6 +1,6 @@
 <?php
 // ACCOUNTS MODEL
-    require '../library/connections.php';
+    require_once '../library/connections.php';
 
     function checkPassword($clientPassword){
         $pattern = '/^(?=.*[[:digit:]])(?=.*[[:punct:]])(?=.*[A-Z])(?=.*[a-z])([^\s]){8,}$/';
@@ -14,7 +14,7 @@
     // FUNCTION THAT HANDLES member REGISTRATION
     function regmember($username, $password, $email, $fullName){
         // Create a connection object using the phpmotors connection function
-        $db =  get_db();
+        $db = get_db();
         // The SQL statement
         $sql = 'INSERT INTO member (username, memberLastname, memberEmail, fullName)
             VALUES (:username, :password, :email, :fullName)';
@@ -39,7 +39,7 @@
 
     // CHECK FOR THAT THE EMAIL ADRESS BEING USED TO REGISTER IS NOT ALREADY IN THE DB
     function checkExistingEmail($email) {
-        $db =   get_db();
+        $db = get_db();
         $sql = 'SELECT email FROM member WHERE email = :email';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':email', $email, PDO::PARAM_STR);
@@ -55,7 +55,7 @@
 
     // Get member data based on an email address
     function getmember($email){
-        $db =  get_db();
+        $db = get_db();
         $sql = 'SELECT * FROM member WHERE email = :email';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':email', $email, PDO::PARAM_STR);
@@ -67,7 +67,7 @@
 
     // Get member data based on ID
     function getmemberById($id){
-        $db =  get_db();
+        $db = get_db();
         $sql = 'SELECT * FROM member WHERE id = :id';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':id', $id, PDO::PARAM_STR);
@@ -82,7 +82,7 @@
     // FUNCTION THAT UPDATES member INFO
     function updatemember($username,  $email, $fullName, $id){
         // Create a connection object using the phpmotors connection function
-        $db =  get_db();
+        $db = get_db();
         // The SQL statement
         $sql = 'UPDATE member SET username = :username, email = :email, fullName =:fullName WHERE id = :id';
         // Create the prepared statement using the phpmotors connection
@@ -107,7 +107,7 @@
     // FUNCTION THAT UPDATES member PASSWORD
     function updatePassowrd($password, $id){
         // Create a connection object using the phpmotors connection function
-        $db =  get_db();
+        $db = get_db();
         // The SQL statement
         $sql = 'UPDATE members SET password = :password WHERE id = :id';
         // Create the prepared statement using the phpmotors connection
