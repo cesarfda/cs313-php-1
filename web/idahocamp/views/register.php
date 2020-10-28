@@ -44,7 +44,7 @@
             </form>
             <div class="mt-2 text-center">
               Have an account?
-              <a href="/idahocamp/views/login.php">Login</a>
+              <a href="/idahocamp/accounts/index.php?action=login">Login</a>
             </div>
           </div>
         </div>

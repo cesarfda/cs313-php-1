@@ -24,22 +24,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li id="home" class="nav-item">
-            <a class="nav-link" href="./index.php">Campgrounds</a>
+            <a class="nav-link" href="/idahocamp/index.php">Campgrounds</a>
           </li>
           <li id="about" class="nav-item">
-            <a class="nav-link" href="./index.php?action=About">About</a>
+            <a class="nav-link" href="/idahocamp/index.php?action=About">About</a>
           </li>
           <li id="newCampground" class="nav-item">
-            <a class="nav-link" href="./index.php?action=addCamp">New</a>
+            <a class="nav-link" href="/idahocamp/index.php?action=addCamp">New</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
           
             <li id="login" class="nav-item">
-              <a class="nav-link" href="./accounts/index.php?action=login">Login</a>
+              <a class="nav-link" href="/idahocamp/accounts/index.php?action=login">Login</a>
             </li>
             <li id="register" class="nav-item">
-              <a class="nav-link" href="./accounts/index.php?action=signUp">Sign Up</a>
+              <a class="nav-link" href="/idahocamp/accounts/index.php?action=signUp">Sign Up</a>
             </li>
 
               <?php 
@@ -51,8 +51,8 @@
                 
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class='dropdown-item' href='./accounts'>Profile</a>
-                <a class="dropdown-item" href="./accounts/index.php?action=logout">Log Out</a>
+                <a class='dropdown-item' href='/idahocamp/accounts'>Profile</a>
+                <a class="dropdown-item" href="/idahocamp/accounts/index.php?action=logout">Log Out</a>
               </div>
               </li>
               <?php } ?>
