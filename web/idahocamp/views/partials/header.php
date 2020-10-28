@@ -48,14 +48,14 @@
                 <i class="fas fa-user"></i>
                 
               </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              
               <?php 
-              if($_SESSION['loggedin']){
-                echo "<a class='dropdown-item' href='./accounts'>Profile</a>";
-              }
-              ?>
+              if($_SESSION['loggedin']){?>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class='dropdown-item' href='./accounts'>Profile</a>
                 <a class="dropdown-item" href=".accounts/index.php?action=logout">Log Out</a>
               </div>
+              <?php } ?>
             </li>
          
         </ul>
