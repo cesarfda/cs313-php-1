@@ -16,7 +16,7 @@
 <body>
   <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-danger">
     <div class="container">
-      <a class="navbar-brand" href="./index.php">IdahoCamping</a>
+      <a class="navbar-brand" href="./index.php">Idaho Camping</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

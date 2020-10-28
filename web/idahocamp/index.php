@@ -110,6 +110,13 @@ switch ($action){
             die();
         break;
 
+        case 'del':
+            $campId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+            $campInfo = getCampInfo($campId);
+            include './views/campgrounds/edit.php';
+            die();
+        break;
+
         case 'deleteCamp':
             //Fetch Data
             $campId = filter_input(INPUT_POST, 'campId', FILTER_SANITIZE_NUMBER_INT);

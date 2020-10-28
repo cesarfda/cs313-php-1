@@ -5,13 +5,13 @@
         <div class="col-md-3">
           <div class="d-none d-md-block">
             <div class="lead text-center text-capitalize">
-              <?php if(isset($campInfo['name'])){echo "$campInfo[name]";} ?>
+              <?php# if(isset($campInfo['name'])){echo "$campInfo[name]";} ?>
             </div>
               <div class="card shadow-sm mt-3">
                   <div id="map"></div>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item"><i class="fas fa-map-marker-alt"></i>
-                      <?php if(isset($campInfo['name'])){echo "$campInfo[name]";} ?>
+                      <?php# if(isset($campInfo['name'])){echo "$campInfo[name]";} ?>
                       </li>
                     </ul>
                   </div>
@@ -43,7 +43,7 @@
               <!-- Add session to control delete buttons -->
                 <form id="deleteForm" action="./index.php" method="POST" class="float-right">
                   <button type="submit" class="delBtn btn text-dark btn-lg">
-                  <input type="hidden" name="action" value="deleteCamp">
+                  <input type="hidden" name="action" value="del">
                   <input type="hidden" name="campId" value="<?php if(isset($campId)){echo $campId;} elseif(isset($campInfo['id'])){ echo $campInfo['id'];}?>">
                   <i class="fas fa-trash-alt"></i>
                 </button>
