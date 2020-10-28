@@ -38,7 +38,7 @@
               </div>
               <div class="form-group">
                 <label for="">Password*</label>
-                <input type="password" name="password" class="form-control" id="password" required>
+                <input type="password" name="password" class="form-control" id="password" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
                 <div class="invalid-feedback">
                   Please enter a password.
                 </div>
