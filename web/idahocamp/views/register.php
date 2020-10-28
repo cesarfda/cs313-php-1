@@ -9,7 +9,7 @@
             <p>
               <small class="text-muted">Fields marked * are required.</small>
             </p>
-            <form class="needs-validation" action="/register" enctype="multipart/form-data" method="POST" novalidate>
+            <form class="needs-validation" action="/accounts/index.php" enctype="multipart/form-data" method="POST" novalidate>
               <div class="form-group">
                 <label for="">Name*</label>
                 <input type="text" name="fullName" class="form-control" id="fullName" placeholder="John Smith" required>
@@ -40,6 +40,7 @@
               </div>
               
               <button type="submit" class="btn btn-danger btn-block">Sign Up</button>
+              <input type="hidden" name="action" value="register">
             </form>
             <div class="mt-2 text-center">
               Have an account?
