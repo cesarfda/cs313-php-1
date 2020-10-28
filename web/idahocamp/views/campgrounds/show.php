@@ -41,10 +41,10 @@
               </span>
               </p>
               <!-- Add session to control delete buttons -->
-                <form id="deleteForm" action="./index.php" method="POST" class="float-right">
+                <form id="deleteForm" action="./index.php" method="GET" class="float-right">
                   <button type="submit" class="delBtn btn text-dark btn-lg">
                   <input type="hidden" name="action" value="del">
-                  <input type="hidden" name="campId" value="<?php if(isset($campId)){echo $campId;} elseif(isset($campInfo['id'])){ echo $campInfo['id'];}?>">
+                  <input type="hidden" name="id" value="<?php if(isset($campId)){echo $campId;} elseif(isset($campInfo['id'])){ echo $campInfo['id'];}?>">
                   <i class="fas fa-trash-alt"></i>
                 </button>
                 </form>
