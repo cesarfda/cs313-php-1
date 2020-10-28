@@ -31,14 +31,14 @@
               </div>
               <div class="form-group">
                 <label for="">Username*</label>
-                <input type="text" name="username" class="form-control" id="exampleInputUsername" placeholder="johnsmith" required>
+                <input type="text" name="username" id="username" class="form-control"  placeholder="johnsmith" required>
                 <div class="invalid-feedback">
                   Please choose a username.
                 </div>
               </div>
               <div class="form-group">
                 <label for="">Password*</label>
-                <input type="password" name="password" class="form-control" id="exampleInputPassword1" required>
+                <input type="password" name="password" class="form-control" id="password" required>
                 <div class="invalid-feedback">
                   Please enter a password.
                 </div>
