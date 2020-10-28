@@ -9,7 +9,7 @@
             <p>
               <small class="text-muted">Fields marked * are required.</small>
             </p>
-            <form class="needs-validation" action="/accounts/index.php" enctype="multipart/form-data" method="POST" novalidate>
+            <form class="needs-validation" action="/idahocamp/accounts/index.php" enctype="multipart/form-data" method="POST" novalidate>
               <div class="form-group">
                 <label for="">Name*</label>
                 <input type="text" name="fullName" class="form-control" id="fullName" placeholder="John Smith" required>
