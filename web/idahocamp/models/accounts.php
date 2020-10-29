@@ -16,7 +16,7 @@
         // Create a connection object using the phpmotors connection function
         $db = get_db();
         // The SQL statement
-        $sql = 'INSERT INTO member (username, memberLastname, memberEmail, fullName)
+        $sql = 'INSERT INTO member (username, password, email, fullName)
             VALUES (:username, :password, :email, :fullName)';
         // Create the prepared statement using the phpmotors connection
         $stmt = $db->prepare($sql);
