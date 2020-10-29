@@ -35,7 +35,6 @@
               <hr>
               <p class="card-text text-muted">
                 <span>Submitted by
-                <a href="/users/<?= $campInfo['author'] ?>">
                 <?php if(isset($authorName['full_name'])){echo "$authorName[full_name]";} ?></a> on
                 <?php if(isset($campInfo['creation_date'])){echo date_format(date_create($campInfo['creation_date']), 'd/m/Y');} ?>
               </span>
