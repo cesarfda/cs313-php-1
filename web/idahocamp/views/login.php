@@ -7,10 +7,15 @@
         <div class="card shadow border-0">
           <div class="card-body">
             <h1 class="text-center">Login</h1>
+            <?php
+                    if (isset($message)) {
+                    echo $message;
+                    }
+            ?>
             <form class="needs-validation" action="/idahocamp/accounts/index.php" method="POST" novalidate>
               <div class="form-group">
                 <label for="">Username</label>
-                <input type="text" name="username" class="form-control" id="username" placeholder="Username" required>
+                <input type="text" name="username" <?php if(isset($username)){echo "value='$username'";}?> class="form-control" id="username" placeholder="Username" required>
                 <div class="invalid-feedback">
                   Please enter your username.
                 </div>

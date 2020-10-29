@@ -17,21 +17,21 @@
             <form class="needs-validation" action="/idahocamp/accounts/index.php" enctype="multipart/form-data" method="POST" novalidate>
               <div class="form-group">
                 <label for="">Name*</label>
-                <input type="text" name="fullName" class="form-control" id="fullName" placeholder="John Smith" required>
+                <input type="text" name="fullName" class="form-control" <?php if(isset($fullName)){echo "value='$fullName'";}?> id="fullName" placeholder="John Smith" required>
                 <div class="invalid-feedback">
                   Please enter your name.
                 </div>
               </div>
               <div class="form-group">
                 <label for="">Email*</label>
-                <input type="text" name="email" class="form-control" id="email" placeholder="john@smith.com" required>
+                <input type="text" name="email" class="form-control" <?php if(isset($email)){echo "value='$email'";}?> id="email" placeholder="john@smith.com" required>
                 <div class="invalid-feedback">
                   Please provide an email.
                 </div>
               </div>
               <div class="form-group">
                 <label for="">Username*</label>
-                <input type="text" name="username" id="username" class="form-control"  placeholder="johnsmith" required>
+                <input type="text" name="username" id="username" <?php if(isset($username)){echo "value='$username'";}?> class="form-control"  placeholder="johnsmith" required>
                 <div class="invalid-feedback">
                   Please choose a username.
                 </div>
