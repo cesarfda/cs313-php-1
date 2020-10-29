@@ -2,7 +2,7 @@
 //===========================
 //FUNCTION TO ADD A Campsite
 //===========================
-require_once './library/connections.php';
+require_once '../library/connections.php';
 
 function getCampInfo($campId){
   $db = get_db();
