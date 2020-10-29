@@ -26,7 +26,7 @@
               </div>
               <div class="form-group">
                 <label for="">Image URL*</label>
-                <input type="text" pattern="[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)" class="form-control" name="campImage" id="campImage" placeholder="Image" required>
+                <input type="text" pattern="(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})" class="form-control" name="campImage" id="campImage" placeholder="Image" required>
                 <div class="invalid-feedback">
                   Please provide a campground name.
                 </div>

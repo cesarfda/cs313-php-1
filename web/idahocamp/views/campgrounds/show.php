@@ -50,11 +50,10 @@
               <i class="fas fa-trash-alt"></i>
             </button>
           </form>
-          <?php } ?>
-
           <a href="./index.php?action=mod&id=<?= $campInfo['id'] ?>" class="btn text-dark btn-lg float-right">
             <i class="fas fa-pencil-alt"></i>
           </a>
+          <?php } ?>
         </div>
       </div>
     </div>
