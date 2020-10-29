@@ -23,7 +23,7 @@
                   <a class="btn btn-warning btn-sm float-left mr-1" href="/idahocamp/accounts/index.php?action=updateInfo">Edit Profile</a>
                   <form class="float-left" action="/idahocamp/accounts/index.php" method="POST">
                     <button type="submit" class="btn btn-danger btn-sm">Delete Account</button>
-                    <input type="hidden" name="action" value="deleteAccount">
+                    <input type="hidden" name="action" value="delAccount">
                   </form>
                 </li>          
           </ul>
