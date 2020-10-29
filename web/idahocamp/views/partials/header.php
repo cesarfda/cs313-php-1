@@ -51,7 +51,7 @@
                 
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class='dropdown-item' href='/idahocamp/accounts'>Profile</a>
+                <a class='dropdown-item' href='/idahocamp/accounts/index.php?action=details'>Profile</a>
                 <a class="dropdown-item" href="/idahocamp/accounts/index.php?action=logout">Log Out</a>
               </div>
               </li>

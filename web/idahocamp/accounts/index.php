@@ -123,6 +123,11 @@ switch ($action){
         include '../views/users/edit.php';
         exit;
       break;
+    //Show details
+      case 'details':
+        include '../views/users/show.php';
+        exit;
+      break;
     //UPDATE ACCOUNT INFO
       case 'updateAccountInfo':
         // Filter and store the data
