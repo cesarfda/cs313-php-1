@@ -120,38 +120,38 @@ switch ($action){
 
     //UPDATE INFO VIEW
       case 'updateInfo':
-        include '../view/client-update.php';
+        include '../views/users/edit.php';
         exit;
       break;
     //UPDATE ACCOUNT INFO
       case 'updateAccountInfo':
         // Filter and store the data
-        $clientFirstname = filter_input(INPUT_POST, 'clientFirstname', FILTER_SANITIZE_STRING);
-        $clientLastname = filter_input(INPUT_POST, 'clientLastname', FILTER_SANITIZE_STRING);
-        $clientEmail = filter_input(INPUT_POST, 'clientEmail', FILTER_SANITIZE_EMAIL);
+        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+        $fullName = filter_input(INPUT_POST, 'fullName', FILTER_SANITIZE_STRING);
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $clientId = $_SESSION['clientData']['clientId'];
        
 
         // Check for missing data
-        if(empty($clientFirstname) || empty($clientLastname) || empty($clientEmail)){
+        if(empty($username) || empty($fullName) || empty($email)){
         $message = '<p>Please provide information for all empty form fields.</p>';
-        include '../view/client-update.php';
+        include '../views/users/edit.php';
         exit; 
         }
 
         // Send the data to the model
-        $modOutcome = updatemember($clientFirstname, $clientLastname, $clientEmail, $clientId);
+        $modOutcome = updatemember($username, $fullName, $email, $clientId);
 
 
         // Check and report the result
         if($modOutcome){
           $clientData = getmemberById($clientId);
           $_SESSION['clientData'] = $clientData;
-          header('Location: /phpmotors/accounts');
+          header('Location: /idahocamp/index.php');
           exit;
         } else {
-          $message = "<p>Sorry $clientFirstname, but the update failed. Please try again.</p>";
-          include '../view/client-update.php';
+          $message = "<p>Sorry $fullName, but the update failed. Please try again.</p>";
+          include '../views/users/edit.php';
           exit;
         }
       break;
@@ -159,14 +159,14 @@ switch ($action){
     //UPDATE ACCOUNT PASSWORD
     case 'updateAccountPsw':
       // Filter and store the data
-      $clientPassword = filter_input(INPUT_POST, 'clientPassword', FILTER_SANITIZE_STRING);
+      $clientPassword = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
       $checkPassword = checkPassword($clientPassword);
-      $clientId = $_SESSION['clientData']['clientId'];
+      $clientId = $_SESSION['clientData']['id'];
 
       // Check for missing data
       if(empty($checkPassword)){
       $message = '<p>Please provide information for all empty form fields.</p>';
-      include '../view/client-update.php';
+      include '../views/users/edit.php';
       exit; 
       }
       // Hash the checked password
@@ -179,11 +179,11 @@ switch ($action){
       // Check and report the result
       if($modOutcome){
         $_SESSION['message'] = "Your password has been updated. Please use your email and password to login.";
-        header('Location: /phpmotors/accounts/?action=login');
+        header('Location: /idahocamp/index.php');
         exit;
       } else {
-        $message = "<p>Sorry $clientFirstname, but the update failed. Please try again.</p>";
-        include '../view/client-update.php';
+        $message = "<p>Sorry, but the update failed. Please try again.</p>";
+        include '../views/users/edit.php';
         exit;
       }
     break;
