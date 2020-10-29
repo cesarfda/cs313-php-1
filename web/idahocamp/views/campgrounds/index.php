@@ -1,6 +1,6 @@
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/header.php';
-      require_once '/idahocamp/library/connections.php';
+      require_once './library/connections.php';
       $db = get_db();
 ?>
   <header class="jumbotron text-light rounded-0 d-none d-md-block">
