@@ -1,6 +1,7 @@
 <?php
 // MAIN CONTROLER
 require_once './library/connections.php';
+require_once './models/accounts.php';
 $db = get_db(); 
 // Create or access a Session
 session_start();
