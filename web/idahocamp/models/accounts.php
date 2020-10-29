@@ -1,6 +1,6 @@
 <?php
 // ACCOUNTS MODEL
-    require_once '../library/connections.php';
+    
 
     function checkPassword($clientPassword){
         $pattern = '/^(?=.*[[:digit:]])(?=.*[[:punct:]])(?=.*[A-Z])(?=.*[a-z])([^\s]){8,}$/';
