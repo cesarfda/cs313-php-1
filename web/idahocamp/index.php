@@ -96,6 +96,7 @@ switch ($action){
         case 'detail':
             $campId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
             $campInfo = getCampInfo($campId);
+            $authorName = getmemberById($campInfo['author']);
             include './views/campgrounds/show.php';
             die();
         break;
