@@ -40,6 +40,8 @@
             </span>
           </p>
           <!-- Add session to control delete buttons -->
+          <?php if($_SESSION['clientData']['id'] == $authorName['id']){ ?>
+
           <form id="deleteForm" action="./index.php" method="GET" class="float-right">
             <button type="submit" class="delBtn btn text-dark btn-lg">
               <input type="hidden" name="action" value="del">
@@ -48,6 +50,8 @@
               <i class="fas fa-trash-alt"></i>
             </button>
           </form>
+          <?php } ?>
+
           <a href="./index.php?action=mod&id=<?= $campInfo['id'] ?>" class="btn text-dark btn-lg float-right">
             <i class="fas fa-pencil-alt"></i>
           </a>
