@@ -10,14 +10,14 @@
             <form class="needs-validation" action="/login" method="POST" novalidate>
               <div class="form-group">
                 <label for="">Username</label>
-                <input type="text" name="username" class="form-control" id="exampleInputUsername" placeholder="Username" required>
+                <input type="text" name="username" class="form-control" id="username" placeholder="Username" required>
                 <div class="invalid-feedback">
                   Please enter your username.
                 </div>
               </div>
               <div class="form-group">
                 <label for="">Password</label>
-                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
                 <div class="invalid-feedback">
                   Please enter your password.
                 </div>

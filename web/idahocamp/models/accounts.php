@@ -16,7 +16,7 @@
         // Create a connection object using the phpmotors connection function
         $db = get_db();
         // The SQL statement
-        $sql = 'INSERT INTO member (username, password, email, fullName)
+        $sql = 'INSERT INTO member (username, password, email, full_name)
             VALUES (:username, :password, :email, :fullName)';
         // Create the prepared statement using the phpmotors connection
         $stmt = $db->prepare($sql);
@@ -54,11 +54,11 @@
     }
 
     // Get member data based on an email address
-    function getmember($email){
+    function getmember($username){
         $db = get_db();
-        $sql = 'SELECT * FROM member WHERE email = :email';
+        $sql = 'SELECT * FROM member WHERE username = :username';
         $stmt = $db->prepare($sql);
-        $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+        $stmt->bindValue(':username', $username, PDO::PARAM_STR);
         $stmt->execute();
         $memberData = $stmt->fetch(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
@@ -84,7 +84,7 @@
         // Create a connection object using the phpmotors connection function
         $db = get_db();
         // The SQL statement
-        $sql = 'UPDATE member SET username = :username, email = :email, fullName =:fullName WHERE id = :id';
+        $sql = 'UPDATE member SET username = :username, email = :email, full_name =:fullName WHERE id = :id';
         // Create the prepared statement using the phpmotors connection
         $stmt = $db->prepare($sql);
         // The next four lines replace the placeholders in the SQL

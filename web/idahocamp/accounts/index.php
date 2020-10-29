@@ -72,21 +72,20 @@ switch ($action){
      //
       case 'processLogin':
         //Filter and store
-        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-        $email = checkEmail($email);
+        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         $passwordCheck = checkPassword($password);
         //CHECK INPUTS
         // Run basic checks, return if errors
-        if (empty($email) || empty($passwordCheck)) {
-          $message = '<p class="notice">Please provide a valid email address and password.</p>';
-          include './views/login.php';
+        if (empty($username) || empty($passwordCheck)) {
+          $message = '<p class="notice">Please provide a valid username and password.</p>';
+          include '../views/login.php';
           exit;
         }
         
         // A valid password exists, proceed with the login process
-        // Query the client data based on the email address
-        $clientData = getmember($email);
+        // Query the client data based on the username address
+        $clientData = getmember($username);
         // Compare the password just submitted against
         // the hashed password for the matching client
         $hashCheck = password_verify($password, $clientData['password']);
@@ -94,7 +93,7 @@ switch ($action){
         // and return to the login view
         if(!$hashCheck) {
           $message = '<p class="notice">Please check your password and try again.</p>';
-          include './views/login.php';
+          include '../views/login.php';
           exit;
         }
         // A valid user exists, log them in
