@@ -1,6 +1,6 @@
 <?php
 // MAIN CONTROLER
-require_once './library/connections.php';
+require_once '/library/connections.php';
 require_once './models/accounts.php';
 require_once './models/campgrounds.php';
 
