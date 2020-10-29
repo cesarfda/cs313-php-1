@@ -134,7 +134,7 @@ switch ($action){
         $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
         $fullName = filter_input(INPUT_POST, 'fullName', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-        $clientId = $_SESSION['clientData']['clientId'];
+        $clientId = $_SESSION['clientData']['id'];
        
 
         // Check for missing data
