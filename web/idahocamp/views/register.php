@@ -1,3 +1,8 @@
+<?php
+    if($_SESSION['loggedin']){
+        header('Location: /idahocamp/index.php');
+    }
+?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/header.php'; ?>
   <div class="container mt-5">
     <div class="row">

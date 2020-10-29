@@ -36,7 +36,7 @@ switch ($action){
 
       // Check for existing email address in the table
       if($existingUsername){
-      $message = '<p class="notice">That email address already exists. Do you want to login instead?</p>';
+      $message = '<p class="notice">That username already exists. Do you want to login instead?</p>';
       include '../views/login.php';
       exit;
       }
@@ -161,6 +161,15 @@ switch ($action){
         exit; 
         }
 
+        $existingUsername = checkExistingUsername($username);
+
+        // Check for existing username in the table
+        if($existingUsername){
+        $message = '<p class="notice">That username already exists.Please try a different one.</p>';
+        include '../views/users/edit.php';
+        exit;
+        }
+
         // Send the data to the model
         $modOutcome = updatemember($username, $email, $fullName, $clientId);
 
@@ -169,7 +178,7 @@ switch ($action){
         if($modOutcome){
           $clientData = getmemberById($clientId);
           $_SESSION['clientData'] = $clientData;
-          header('Location: ../views/users/edit.ph');
+          header('Location: ../views/users/edit.php');
           exit;
         } else {
           $message = "<p>Sorry $fullName, but the update failed. Please try again.</p>";
