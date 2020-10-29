@@ -1,5 +1,8 @@
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/header.php';
+      require_once '../../library/connections.php';
+      $db = get_db();
+?>
   <header class="jumbotron text-light rounded-0 d-none d-md-block">
     <div class="container ">
       <div class="jumbotron-text mt-5 text-center">
