@@ -109,13 +109,34 @@
         // Create a connection object using the phpmotors connection function
         $db = get_db();
         // The SQL statement
-        $sql = 'UPDATE members SET password = :password WHERE id = :id';
+        $sql = 'UPDATE member SET password = :password WHERE id = :id';
         // Create the prepared statement using the phpmotors connection
         $stmt = $db->prepare($sql);
         // The next four lines replace the placeholders in the SQL
         // statement with the actual values in the variables
         // and tells the database the type of data it is
         $stmt->bindValue(':password', $password, PDO::PARAM_STR);
+        $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+        // Update the data
+        $stmt->execute();
+        // Ask how many rows changed as a result of our insert
+        $rowsChanged = $stmt->rowCount();
+        // Close the database interaction
+        $stmt->closeCursor();
+        // Return the indication of success (rows changed)
+        return $rowsChanged;
+    }
+    // FUNCTION THAT Deletes a member
+    function deleteUser($id){
+        // Create a connection object using the phpmotors connection function
+        $db = get_db();
+        // The SQL statement
+        $sql = 'DELETE FROM member WHERE id = :id';
+        // Create the prepared statement using the phpmotors connection
+        $stmt = $db->prepare($sql);
+        // The next four lines replace the placeholders in the SQL
+        // statement with the actual values in the variables
+        // and tells the database the type of data it is
         $stmt->bindValue(':id', $id, PDO::PARAM_STR);
         // Update the data
         $stmt->execute();

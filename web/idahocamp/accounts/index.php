@@ -128,6 +128,23 @@ switch ($action){
         include '../views/users/show.php';
         exit;
       break;
+    //Delete account
+      case 'delAccount':
+        $clientId = $_SESSION['clientData']['id'];
+        $deleteState = deleteUser($clientId);
+        if($deleteState){
+          $message = "account succefully deleted";
+          header('Location: /idahocamp/index.php');
+          exit;
+        }
+        else{
+          $message = "delete failed, try again later.";
+          include '../views/users/show.php';
+          exit;
+        }
+        
+        
+      break;
     //UPDATE ACCOUNT INFO
       case 'updateAccountInfo':
         // Filter and store the data

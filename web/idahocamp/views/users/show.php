@@ -15,6 +15,11 @@
                 <i class="fas fa-envelope"></i> <strong>Email: </strong><?php if(isset($_SESSION['clientData']['email'])){echo "{$_SESSION['clientData']['email']}";}?></a>             
               </li>                            
                 <li class="list-group-item d-flex justify-content-center">
+                <?php
+                    if (isset($message)) {
+                    echo $message;
+                    }
+            ?>
                   <a class="btn btn-warning btn-sm float-left mr-1" href="/idahocamp/accounts/index.php?action=updateInfo">Edit Profile</a>
                   <form class="float-left" action="/idahocamp/accounts/index.php" method="POST">
                     <button type="submit" class="btn btn-danger btn-sm">Delete Account</button>
