@@ -80,7 +80,7 @@
    
 
     // FUNCTION THAT UPDATES member INFO
-    function updatemember($username,  $email, $fullName, $id){
+    function updatemember($username, $email, $fullName, $id){
         // Create a connection object using the phpmotors connection function
         $db = get_db();
         // The SQL statement

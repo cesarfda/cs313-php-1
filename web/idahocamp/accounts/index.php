@@ -162,7 +162,7 @@ switch ($action){
         }
 
         // Send the data to the model
-        $modOutcome = updatemember($username,  $email, $fullName, $id);
+        $modOutcome = updatemember($username, $email, $fullName, $clientId);
 
 
         // Check and report the result
