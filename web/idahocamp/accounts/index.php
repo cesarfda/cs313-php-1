@@ -178,7 +178,7 @@ switch ($action){
         if($modOutcome){
           $clientData = getmemberById($clientId);
           $_SESSION['clientData'] = $clientData;
-          header('Location: ../views/users/show.php');
+          include '../views/users/show.php';
           exit;
         } else {
           $message = "<p>Sorry $fullName, but the update failed. Please try again.</p>";
