@@ -52,7 +52,7 @@ switch ($action){
       $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
       // Send the data to the model
-      $regOutcome = regmember($username, $password, $email, $fullName);
+      $regOutcome = regmember($username, $hashedPassword, $email, $fullName);
 
 
       // Check and report the result
