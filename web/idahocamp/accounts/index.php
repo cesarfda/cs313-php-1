@@ -134,6 +134,8 @@ switch ($action){
         $deleteState = deleteUser($clientId);
         if($deleteState){
           $message = "account succefully deleted";
+          session_start();
+          session_destroy();
           header('Location: /idahocamp/index.php');
           exit;
         }
