@@ -1,7 +1,7 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/header.php'; ?>
 
 <div id="campgroundsContainer" class="container mt-4">
-  <div class="row">
+  <div class="row justify-content-center">
     <!--<div class="col-md-3">
           <div class="d-none d-md-block">
             <div class="lead text-center text-capitalize">
