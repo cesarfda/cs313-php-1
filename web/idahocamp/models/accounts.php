@@ -56,7 +56,7 @@
     // Get member data based on an email address
     function getmember($username){
         $db = get_db();
-        $sql = 'SELECT * FROM member WHERE username = :username';
+        $sql = 'SELECT id, username, email, full_name, password FROM member WHERE username = :username';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':username', $username, PDO::PARAM_STR);
         $stmt->execute();

@@ -46,7 +46,7 @@
               <button type="submit" class="btn btn-danger btn-block">Submit Profile Changes</button>
               <input type="hidden" name="action" value="updateAccountInfo">
             </form>
-            <h1 class="text-center">Or edit your password</h1>
+            <h1 class="text-center mt-4">or password</h1>
             <form class="needs-validation" action="/idahocamp/accounts/index.php" enctype="multipart/form-data" method="POST" novalidate>
             <div class="form-group">
                 <label for="">Password*</label>
