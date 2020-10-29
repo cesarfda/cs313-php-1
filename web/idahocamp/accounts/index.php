@@ -4,7 +4,7 @@
 // Create or access a Session
 session_start();
 
-require_once '../library/connections.php';
+#require_once '../library/connections.php';
 require_once '../models/accounts.php';
 
 $action = filter_input(INPUT_POST, 'action');
@@ -164,7 +164,7 @@ switch ($action){
         $existingUsername = checkExistingUsername($username);
 
         // Check for existing username in the table
-        if($existingUsername){
+        if($existingUsername && ($username !=$_SESSION['clientData']['username'] )){
         $message = '<p class="notice">That username already exists.Please try a different one.</p>';
         include '../views/users/edit.php';
         exit;
