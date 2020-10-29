@@ -8,6 +8,10 @@
           <div class="card-body">
             <h1 class="text-center">Login</h1>
             <?php
+                    if (isset($_SESSION['message'])) {
+                      echo $_SESSION['message'];
+                      unset($_SESSION['message']);
+                     }
                     if (isset($message)) {
                     echo $message;
                     }
@@ -28,7 +32,7 @@
                 </div>
               </div>
               <button type="submit" class="btn btn-danger btn-block">Login</button>
-              <input type="hidden" name="action" value="login">
+              <input type="hidden" name="action" value="processLogin">
             </form>
             <div class="mt-2 text-center">
               Don't have an account?

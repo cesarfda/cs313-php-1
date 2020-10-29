@@ -38,15 +38,15 @@
     }
 
     // CHECK FOR THAT THE EMAIL ADRESS BEING USED TO REGISTER IS NOT ALREADY IN THE DB
-    function checkExistingEmail($email) {
+    function checkExistingUsername($username) {
         $db = get_db();
-        $sql = 'SELECT email FROM member WHERE email = :email';
+        $sql = 'SELECT username FROM member WHERE username = :username';
         $stmt = $db->prepare($sql);
-        $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+        $stmt->bindValue(':username', $username, PDO::PARAM_STR);
         $stmt->execute();
-        $matchEmail = $stmt->fetch(PDO::FETCH_NUM);
+        $matchUsername = $stmt->fetch(PDO::FETCH_NUM);
         $stmt->closeCursor();
-        if(empty($matchEmail)){
+        if(empty($matchUsername)){
         return 0;
         } else {
         return 1;

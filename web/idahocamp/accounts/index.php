@@ -32,10 +32,10 @@ switch ($action){
       $email = checkEmail($email);
       $checkPassword = checkPassword($password);
       //Check for existing email address
-      $existingEmail = checkExistingEmail($email);
+      $existingUsername = checkExistingUsername($username);
 
       // Check for existing email address in the table
-      if($existingEmail){
+      if($existingUsername){
       $message = '<p class="notice">That email address already exists. Do you want to login instead?</p>';
       include '../views/login.php';
       exit;
