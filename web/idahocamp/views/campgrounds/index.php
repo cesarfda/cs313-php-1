@@ -1,7 +1,5 @@
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/idahocamp/views/partials/header.php';
-      #require_once './library/connections.php';
-      $db = get_db();
 ?>
   <header class="jumbotron text-light rounded-0 d-none d-md-block">
     <div class="container ">
@@ -66,6 +64,7 @@
     </div>
     <div class="row">
     <?php
+    $db = get_db();
     $statement = $db->prepare("SELECT id, name, image, description, location, author FROM camp_site");
     $statement->execute();
     while ($row = $statement-> fetch(PDO::FETCH_ASSOC)) : ?>
