@@ -1,8 +1,8 @@
 <?php
 // MAIN CONTROLER
 require_once 'library/connections.php';
-require_once './models/accounts.php';
-require_once './models/campgrounds.php';
+require_once 'models/accounts.php';
+require_once 'models/campgrounds.php';
 
 #$db = get_db(); 
 // Create or access a Session
